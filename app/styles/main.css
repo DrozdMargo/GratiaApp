@@ -46,6 +46,26 @@ a:active {
 .navbar-default .navbar-toggle:hover {
      background-color:#d89b64;
 }
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  border-top: 1px solid #e6e6e6;
+}
+.row-footer p span {
+	color: #8b909d;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 36px;
+	font-weight: 200;
+}
+.footer-logo {
+    position: absolute;
+    top: -100px;
+    left: 44%;
+}
+.footer-text {
+	margin-top: 80px;
+}
 
 
 @media (min-width: 768px) {
