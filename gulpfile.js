@@ -27,7 +27,13 @@ gulp.task('jshint', function() {
 gulp.task('clean', function() {
     return del(['dist']);
 });
-
+// gulp.task('scripts', ['clean'], function () {
+//       return gulp.src('js/*.js')
+//         .pipe(uglify().on('error', function(e){
+//             console.log(e);
+//          }))
+//         .pipe(gulp.dest('minjs'));
+//   });
 // Default task
 gulp.task('default', ['clean'], function() {
     gulp.start('usemin', 'imagemin','copyfonts');
@@ -35,7 +41,7 @@ gulp.task('default', ['clean'], function() {
 
 
 gulp.task('usemin',['jshint'], function () {
-  return gulp.src('./app/menu.html')
+  return gulp.src('./app/*.html')
       .pipe(usemin({
         css:[minifycss(),rev()],
         js: [uglify(),rev()]
@@ -57,7 +63,7 @@ gulp.task('copyfonts', ['clean'], function() {
    gulp.src('./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eof,svg}*')
    .pipe(gulp.dest('./dist/fonts'));
 });
-
+ 
 // Watch
 gulp.task('watch', ['browser-sync'], function() {
   // Watch .js files
@@ -78,8 +84,8 @@ gulp.task('browser-sync', ['default'], function () {
 
    browserSync.init(files, {
       server: {
-         baseDir: "dist",
-         index: "menu.html"
+         basedir: "dist",
+         index: "index.html"
       }
    });
         // Watch any files in dist/, reload on change
