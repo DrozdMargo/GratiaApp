@@ -46,35 +46,56 @@ a:active {
 .navbar-default .navbar-toggle:hover {
      background-color:#d89b64;
 }
-.row-footer {
-  margin: 0px auto;
-  padding: 20px 0px;
-  border-top: 1px solid #e6e6e6;
+header {
+	margin-bottom: 30px;
 }
-.row-footer p span {
+.menu-title {
+	background-image: url(../images/gratia.png);
+	background-repeat: no-repeat;
+	/*text-align: center;*/
+	background-position: center center;
+	/*vertical-align: middle;*/
+	height: 200px;
+	margin-top: 50px;
+}
+.menu-title h1 {
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+.secondary-text {
+	font-family: 'Crimson Text', serif;
 	color: #8b909d;
-	font-size: 16px;
+	font-size: 20px;
 	font-style: italic;
-	line-height: 36px;
 	font-weight: 200;
 }
-.footer-logo {
-    position: absolute;
-    top: -100px;
-    left: 44%;
-}
-.footer-text {
+footer {
 	margin-top: 80px;
 }
+.row-footer {
+   border-top: 1px solid #e6e6e6;
+}
+.footer-logo {
+    position: relative;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+.footer-text {
+	margin-top: -60px;
+}
+
+
 
 
 @media (min-width: 768px) {
 	
-	 .navbar-brand>img {
-    	 padding-left: 80px;
+	.navbar-brand>img {
+    	padding-left: 80px;
      }
-    
-	.navbar-nav>li {
+    .navbar-nav>li {
     	float: left;
 	}
 	.pull-right {
@@ -94,7 +115,28 @@ a:active {
 	 .navbar-nav ul {
 		width: 100%;
 	}
-	
-	
+	.menu-title {
+	background-image: url(../images/gratia477.png);
+	margin-top: 0;
+	height: 150px;
+	}
+	.menu-title h1 {
+	font-size: 38px;
+	}
+}
 
+@media (max-width: 548px) {
+	.menu-title {
+	background-image: url(../images/gratia315.png);
+	margin-top: 0;
+	height: 120px;
+	}
+	.menu-title h1 {
+	font-size: 26px;
+	}
+	.secondary-text {
+	font-size: 15px;
+	line-height: 15px;
+	}
+    
 }
