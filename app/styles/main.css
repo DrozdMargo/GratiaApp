@@ -1,9 +1,8 @@
 body{
 	background-color: #fff;
-	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
-	font-family: 'Crimson Text', serif;
-	font-weight: 400;
+	/*font-family: 'Roboto', sans-serif;*/
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -91,9 +90,12 @@ footer {
 	margin-top: -60px;
 }
 p.question {
-	line-height: 1.2;
+	margin-top: -5px;
 }
-
+.info-user p,
+.info-address {
+	font-family: 'Crimson Text', serif;
+}
 
 
 
