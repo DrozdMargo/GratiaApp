@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('confusionApp')
-
+     .controller('NavigationCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.isCurrentPath = function (path) {
+      return $location.path() == path;
+    };
+  }])
     .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory) {
 
         $scope.tab = 1;
