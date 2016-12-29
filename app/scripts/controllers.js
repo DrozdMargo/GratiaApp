@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('confusionApp')
+
      .controller('NavigationCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.isCurrentPath = function (path) {
-      return $location.path() == path;
+        $scope.isCurrentPath = function (path) {
+        return $location.path() == path;
     };
   }])
     .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory) {
@@ -75,29 +76,38 @@ angular.module('confusionApp')
     .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', function($scope, $stateParams, menuFactory) {
 
         var dish= menuFactory.getDish(parseInt($stateParams.id,10));
-
         $scope.dish = dish;
 
     }])
 
-    .controller('DishCommentController', ['$scope', function($scope) {
-
-        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+    .controller('DishCommentController', ['$scope', 'menuFactory', function($scope, menuFactory) {
+        $scope.defaultRadioChosen = 5;
+        var score = [
+            {value: "1", label: "1"},
+            {value: "2", label: "2"},
+            {value: "3", label: "3"},
+            {value: "4", label: "4"},
+            {value: "5", label: "5"}
+        ];
+        $scope.scores = score;
+        //Step 1: Create a JavaScript object to hold the comment from the form
+        $scope.commentFormData = {rating: 5, author: '', comment: '', date: ''};
 
         $scope.submitComment = function () {
+            //Step 2: This is how you record the date
+            $scope.commentFormData.date = new Date().toISOString();
 
-            $scope.mycomment.date = new Date().toISOString();
-            console.log($scope.mycomment);
-
-            $scope.dish.comments.push($scope.mycomment);
-
+            // Step 3: Push your comment into the dish's comment array
+            $scope.dish.comments.push($scope.commentFormData);
+                
+            //Step 4: reset your form to pristine
             $scope.commentForm.$setPristine();
 
-            $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+            //Step 5: reset your JavaScript object that holds your comment
+            $scope.commentFormData = {name: '', rating: 5, author: ''};
         };
     }])
 
-// implement the IndexController and About Controller here
     .controller('IndexController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope,$stateParams,menuFactory,corporateFactory) {
         $scope.promotion = menuFactory.getPromotion(0);
         $scope.leader = corporateFactory.getLeader(3);
@@ -106,5 +116,4 @@ angular.module('confusionApp')
 
     .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
         $scope.leaders = corporateFactory.getLeaders();
-    }])
-;
+    }]);
