@@ -1,12 +1,20 @@
 'use strict';
 
-angular.module('confusionApp')
+angular.module('gratiaApp')
 
      .controller('NavigationCtrl', ['$scope', '$location', function ($scope, $location) {
         $scope.isCurrentPath = function (path) {
         return $location.path() == path;
     };
   }])
+     .controller('FlipController', ['$scope', function($scope) {
+    $scope.toggleFlip = function() {
+        $scope.isFlipped = !$scope.isFlipped;
+        $scope.isFlipped2 = !$scope.isFlipped2;
+       $scope.isFlipped1 = !$scope.isFlipped1;
+    }
+
+}])
     .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory) {
 
         $scope.tab = 1;
