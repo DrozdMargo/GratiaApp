@@ -70,12 +70,7 @@ header {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.5;
-    width: 45%;
 }
-.img-thumbnail {
-    width: 250px;
-}
-
 .btn-back {
 	margin-bottom: 20px;
 }
@@ -88,6 +83,12 @@ header {
 .form-stars label {
 	font-size: 17.5px;
 	font-weight: 500;
+}
+.panel dl,
+.media .media-body,
+.row-content p,
+.table-responsive {
+	font-size: 15px;
 }
 .row-footer {
 	margin-top: 80px;
@@ -109,6 +110,24 @@ p.question {
 .info-address {
 	font-family: 'Crimson Text', serif;
 }
+.media {
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+   	box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+}
+.media-img {
+    width: 250px;
+    padding: 20px;
+}
+.media-leader {
+   padding: 20px;
+}
+.media-menu {
+	width: 350px;
+}
+.media-list-menu .media {
+	padding:20px;
+}
 
 
 
@@ -127,9 +146,7 @@ p.question {
     margin-top: 15px;
     float: right;
 	}	
-	.thumbnail .img-thumbnail {
-    width: 350px;
-	}
+	
 
 }
 
@@ -141,16 +158,28 @@ p.question {
 		width: 100%;
 	}
 	.menu-title {
-	background-image: url(../images/gratia477.png);
-	margin-top: 0;
-	height: 150px;
+		background-image: url(../images/gratia477.png);
+		margin-top: 0;
+		height: 150px;
 	}
 	.menu-title h1 {
-	font-size: 38px;
+		font-size: 38px;
 	}
 	.dish-info {
 		font-size: 17px;
 		font-weight: 500;
+	}
+	.media-img {
+		width: 200px;
+		padding: 20px 0 20px 20px;
+	}
+	.leader .media-leader p {
+		font-size: 13px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 20px;
+		font-weight: 600;
 	}
 }
 
@@ -175,13 +204,38 @@ p.question {
 		font-size: 18px;
 		font-weight: 500;
 	}
-	/*.thumbnail.media-left a{
-    	display: block;
-	}*/
+	.panel dl,
+	.media .media-body,
+	.row-content p,
+	.table-responsive {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	
+	.leader .media-leader p {
+		font-size: 11px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 18px;
+		font-weight: 600;
+	}
     
 }
 @media (max-width: 480px) { 
     .nav-tabs > li {
         float:none;
     }
+    .leader .media-leader p {
+		font-size: 10px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.media-img{
+		width: 180px;
+	}
+    
 }

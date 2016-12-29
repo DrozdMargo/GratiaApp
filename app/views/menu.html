@@ -13,11 +13,11 @@
                     <a ng-click="select(4)" aria-controls="desserts" role="tab">Desserts</a></li>
             </ul>
             <div class="tab-content">
-                <ul class="media-list tab-pane fade in active">
+                <ul class="media-list media-list-menu tab-pane fade in active">
                     <li class="media" ng-repeat="dish in dishes | filter: filtText">
                         <div class="media-left">
                             <a ng-href="#/menu/{{dish._id}}">
-                            <img class="media-object img-thumbnail"
+                            <img class="media-object media-menu"
                                      ng-src={{dish.image}} alt="Uthappizza">
                             </a>
                         </div>
