@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        
+       <header>
+    <div class="menu-title">
+        <h1 class="text-center">Menu</h1>
+        <p class="text-center secondary-text">Lorem ipsum dolor sit amet.</p> 
+    </div>
+</header>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row row-content" ng-controller="MenuController">
+        <div class="col-xs-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" ng-class="{active:isSelected(1)}">
+                    <a ng-click="select(1)" aria-controls="all menu" role="tab">The Menu</a></li>
+                <li role="presentation" ng-class="{active:isSelected(2)}">
+                    <a ng-click="select(2)" aria-controls="appetizers" role="tab">Appetizers</a></li>
+                <li role="presentation" ng-class="{active:isSelected(3)}">
+                    <a ng-click="select(3)" aria-controls="mains" role="tab">Mains</a></li>
+                <li role="presentation" ng-class="{active:isSelected(4)}">
+                    <a ng-click="select(4)" aria-controls="desserts" role="tab">Desserts</a></li>
+            </ul>
+            <div class="tab-content">
+                <ul class="media-list media-list-menu tab-pane fade in active">
+                    <li class="media" ng-repeat="dish in dishes | filter: filtText">
+                        <div class="media-left">
+                            <a ng-href="#/menu/{{dish._id}}">
+                            <img class="media-object media-menu"
+                                     ng-src={{dish.image}} alt="Uthappizza">
+                            </a>
+                        </div>
+            <div class="media-body">
+                            <h2 class="media-heading">{{dish.name}}
+                                <span class="label label-danger">{{dish.label}}</span>
+                                <span class="badge">{{dish.price | currency}}</span>
+                            </h2>
+                            <button ng-click="showDetails = ! showDetails" class="btn btn-warning btn-menu" type="button">
+                {{showDetails ? 'Hide Details':'Show Details'}}
+            </button>
+                            <p ng-show="showDetails" class="description">{{dish.description}}</p>
+            </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

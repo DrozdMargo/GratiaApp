@@ -1,0 +1,379 @@
+body{
+	background-color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	/*font-family: 'Roboto', sans-serif;*/
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #151b28;
+	background-color: #fff;
+}
+.navbar-default{
+	background-color: #fff;
+	height: 120px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #e6e6e6;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:active {
+	background-color: #fff;
+	color: #d89b64;
+	transition: 0.4s;
+}
+.navbar-default .navbar-nav>li>a {
+ 	background-color: #fff;
+ }
+ .navbar-brand>img {
+ 	display: inline;
+}
+.nav  li{
+    z-index: 2;
+}
+	.navbar-toggle {
+    margin-top: 20px;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+     background-color:#d89b64;
+}
+header {
+	margin-bottom: 30px;
+}
+.menu-title {
+	background-image: url(../images/gratia.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 200px;
+	margin-top: 50px;
+}
+.menu-title h1 {
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+.secondary-text {
+	font-family: 'Crimson Text', serif;
+	color: #8b909d;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 200;
+}
+.media:first-child {
+    margin-top: 15px; 
+}
+.description {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.btn-back {
+	margin-bottom: 20px;
+}
+.btn-submit {
+	padding-left: 0;
+}
+.radio-stars {
+    line-height: 1;
+}
+.form-stars label {
+	font-size: 17.5px;
+	font-weight: 500;
+}
+.panel dl,
+.media .media-body,
+.row-content p,
+.table-responsive {
+	font-size: 15px;
+}
+.row-footer {
+	margin-top: 80px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.footer-logo {
+    position: relative;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+.footer-text {
+	margin-top: -60px;
+}
+p.question {
+	margin-top: -5px;
+}
+.info-user p,
+.info-address {
+	font-family: 'Crimson Text', serif;
+}
+.media {
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+   	box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+}
+.media-img {
+    width: 250px;
+    padding: 20px;
+}
+.media-leader {
+   padding: 20px;
+}
+.media-menu {
+	width: 350px;
+}
+.media-list-menu .media {
+	padding: 20px;
+}
+.btn-menu {
+	margin: 10px 0;
+}
+
+/*flip card begin*/
+.flip {
+  -webkit-perspective: 800;
+   height: 200px;
+   position: relative;
+   margin: 10px auto;
+}
+.flip .card.flipped {
+	-webkit-transform: rotatex(-180deg);
+	transform: rotatex(-180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  float: left;
+}
+.flip .card .face {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 2;
+    text-align: center;
+    font-size: 24px;
+	cursor: pointer;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+   	box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+}
+.face h3{
+	color: #d89b64;
+	margin-top: 55px;
+}
+.face p{
+	font-size: 18px;
+	padding: 10px 15px;
+	transition: 0;
+}
+.flip .card .front {
+	position: absolute;
+	z-index: 1;
+    color: black;
+    background-color: #f8f8f8;  
+    background-image: url(../images/logo-grey.png);
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}
+.flip .card .back {
+    -webkit-transform: rotatex(-180deg);
+    transform: rotatex(-180deg);
+    background-color: #151b28;
+    color: #d89b64;
+    font-family: Georgia;
+   }
+.flip .card .back p {
+	margin-top: 60px;
+	}
+.jumbotron {
+	padding: 15px;
+	background-image: url(../images/knife-full.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 500px;
+	background-size: cover;
+}
+
+.details {
+	background-image: url(../images/detail.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 400px;
+	background-size: cover;
+	margin: 30px 0;
+}
+.media.media-promotion {
+	background-color: rgba(0,0,0,.6);
+	color: #fff;
+	margin-top: 80px;
+}
+.media-promotion .media-body {
+	padding: 25px;
+}
+
+
+
+
+@media (min-width: 768px) {
+	
+	.navbar-brand>img {
+    	padding-left: 80px;
+     }
+    .navbar-nav>li {
+    	float: left;
+	}
+	.pull-right {
+		float: left;
+	}
+	.nav.navbar-nav {
+    margin-top: 15px;
+    float: right;
+	}	
+	.container-fluid .jumbotron {
+		padding: 15px;
+}
+	
+
+}
+
+@media (max-width: 768px) {
+	.navbar-default{
+		height: 80px;
+	}
+	 .navbar-nav ul {
+		width: 100%;
+	}
+	.menu-title {
+		background-image: url(../images/gratia477.png);
+		margin-top: 0;
+		height: 150px;
+	}
+	.menu-title h1 {
+		font-size: 38px;
+	}
+	.dish-info {
+		font-size: 17px;
+		font-weight: 500;
+	}
+	.media-img {
+		width: 200px;
+		padding: 20px 0 20px 20px;
+	}
+	.media-promotion .media-img {
+		padding:15px;
+	}
+	.leader .media-leader p {
+		font-size: 13px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.media-list-menu h2 {
+		font-size: 22px;
+	}
+	.media-menu {
+	width: 300px;
+	}
+	.media.media-promotion {
+		margin-top: 50px;
+}
+}
+
+@media (max-width: 548px) {
+	.menu-title {
+	background-image: url(../images/gratia315.png);
+	margin-top: 0;
+	height: 120px;
+	}
+	.menu-title h1 {
+	font-size: 26px;
+	}
+	.secondary-text {
+	font-size: 15px;
+	line-height: 15px;
+	}
+	.dish-info {
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.dish-info h2 {
+		font-size: 18px;
+		font-weight: 500;
+	}
+	.panel dl,
+	.media .media-body,
+	.row-content p,
+	.table-responsive {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	
+	.leader .media-leader p {
+		font-size: 11px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.media-menu {
+		width: 250px;
+	}
+	.footer-logo img{
+    width: 100px;
+    height: 100px;
+  }
+  	.media.media-promotion {
+		margin-top: 20px;
+	}
+	.row-home .media-left {
+	float: none;
+    display: block;
+	}
+	.row-home .media-right {
+	float: none;
+    display: block;
+	}
+	.row-home .media-img{
+		width: 220px;
+	}
+	.media-promotion .media-body {
+	padding: 20px;
+}
+    
+}
+@media (max-width: 480px) { 
+    .nav-tabs > li {
+        float:none;
+    }
+    .leader .media-leader p {
+		font-size: 10px;
+		font-weight: 300;
+	}
+	.leader .media-leader h2 {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.media-img{
+		width: 180px;
+	}
+	.media-menu {
+	width: 150px;
+	}
+	.media.media-promotion {
+		margin-top: 10px;
+	}
+	.media-promotion .media-body {
+		padding: 8px;
+	}
+}

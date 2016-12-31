@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        
+       <header>
+    <div class="menu-title">
+        <h1 class="text-center">home</h1>
+        <p class="text-center secondary-text">Lorem ipsum dolor sit amet.</p> 
+    </div>
+</header>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" ng-controller="IndexController">
+    <div class="row row-content">
+        <div class="col-md-12">
+             <div class="jumbotron">
+                <!--   <img src="images/knife-full.png" alt="knife"> -->
+            </div>
+        </div>
+        <div class="col-md-9 col-md-push-1 col-xs-10">
+            <blockquote>
+                    <p>You better cut the pizza in four pieces because
+                        I'm not hungry enough to eat six.</p>
+                    <footer>Yogi Berra,
+                        <cite title="Source Title">The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+     <div class="row row-content row-home">
+        <div class="col-xs-12 col-sm-3">
+           <h3>Meet our Culinary Specialists</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a ui-sref="app">
+                        <img class="media-object media-img" ng-src={{leader.image}} alt="cook">
+                    </a>
+                </div>
+                <div class="media-body media-leader">
+                    <h2 class="media-heading">{{leader.name}}
+                    <small>&nbsp;{{leader.designation}}</small>
+                    </h2>
+                    <p>{{leader.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="details">
+<div class="container">
+    <div class="row row-home row-content">
+        <div class="col-xs-12">
+            
+                <div class="col-md-8 col-md-push-2">
+                    <div class="media media-promotion">
+                    <div class="media-body">
+                        <h2 class="media-heading">{{promotion.name}}
+                        </h2>
+                        <p>{{promotion.description}}</p>
+                    </div>
+                    <div class="media-right">
+                        <a ui-sref="app">
+                            <img class="media-object media-img" ng-src={{promotion.image}} alt="Uthappizza">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+<div class="container" ng-controller="FlipController">
+    <div class="row">
+    <div class="col-md-4 col-lg-4  col-xs-12">
+         <div class="flip">
+            
+              <div class="card"  ng-class="{'flipped':isFlipped}" ng-click="isFlipped = !isFlipped">
+               <div class="face front"> 
+                    <h3>fresh products</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div> 
+                <div class="face back"> 
+                   <p>532 <br> products</p> 
+                </div>
+                </div> 
+            </div>
+        </div>
+ <div class="col-md-4 col-lg-4  col-xs-12">
+         <div class="flip">
+                <div class="card"  ng-class="{'flipped':isFlipped2}" ng-click="isFlipped2 = !isFlipped2">
+               <div class="face front"> 
+                    <h3>diffrent locations</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div> 
+                <div class="face back"> 
+                   <p>18 <br>locations</p>
+                </div>
+                </div> 
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4  col-xs-12">
+          <div class="flip">
+            
+             <div class="card"  ng-class="{'flipped':isFlipped1}" ng-click="isFlipped1 = !isFlipped1">
+               <div class="face front"> 
+                    <h3>from the beggining</h3>
+                    <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>  
+                <div class="face back"> 
+                   <p> 8 <br>locations</p>
+                </div>
+                </div> 
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+       
+
+
