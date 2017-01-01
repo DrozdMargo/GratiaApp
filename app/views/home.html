@@ -1,24 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-        
-       <header>
-    <div class="menu-title">
-        <h1 class="text-center">home</h1>
-        <p class="text-center secondary-text">Lorem ipsum dolor sit amet.</p> 
-    </div>
-</header>
-    </div>
-  </div>
-</div>
-<div class="container-fluid" ng-controller="IndexController">
-    <div class="row row-content">
-        <div class="col-md-12">
-             <div class="jumbotron">
-                <!--   <img src="images/knife-full.png" alt="knife"> -->
+
+<div ng-controller="IndexController">
+    <div  class="container-fluid">
+        <div class="row row-content">
+            <div class="col-md-12">
+                 <div class="jumbotron"></div>
             </div>
         </div>
-        <div class="col-md-9 col-md-push-1 col-xs-10">
+    </div>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-md-9 col-md-push-1 col-xs-10">
             <blockquote>
                     <p>You better cut the pizza in four pieces because
                         I'm not hungry enough to eat six.</p>
@@ -26,12 +17,16 @@
                         <cite title="Source Title">The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014</cite></footer>
             </blockquote>
         </div>
-    </div>
-     <div class="row row-content row-home">
-        <div class="col-xs-12 col-sm-3">
+        </div>
+    
+        
+    <div class="row row-content row-home">
+        <div class="col-md-10 col-md-push-1">
            <h3>Meet our Culinary Specialists</h3>
         </div>
-        <div class="col-xs-12 col-sm-9">
+    </div>
+    <div class="row row-content row-home">
+        <div class="col-md-10 col-md-push-1">
             <div class="media">
                 <div class="media-left media-middle">
                     <a ui-sref="app">
@@ -47,13 +42,14 @@
             </div>
         </div>
     </div>
+    </div>
 </div>
 <div class="details">
-<div class="container">
+<div class="container-fluid">
     <div class="row row-home row-content">
         <div class="col-xs-12">
             
-                <div class="col-md-8 col-md-push-2">
+                <div class="col-md-8 col-md-push-2 col-lg-8 col-lg-push-2">
                     <div class="media media-promotion">
                     <div class="media-body">
                         <h2 class="media-heading">{{promotion.name}}

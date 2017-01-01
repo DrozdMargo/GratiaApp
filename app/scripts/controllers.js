@@ -4,7 +4,7 @@ angular.module('gratiaApp')
 
      .controller('NavigationCtrl', ['$scope', '$location', function ($scope, $location) {
         $scope.isCurrentPath = function (path) {
-        return $location.path() == path;
+        return $location.path() === path;
     };
   }])
      .controller('FlipController', ['$scope', function($scope) {
@@ -12,7 +12,7 @@ angular.module('gratiaApp')
         $scope.isFlipped = !$scope.isFlipped;
         $scope.isFlipped2 = !$scope.isFlipped2;
        $scope.isFlipped1 = !$scope.isFlipped1;
-    }
+    };
 
 }])
     .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory) {
@@ -84,11 +84,10 @@ angular.module('gratiaApp')
     .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', function($scope, $stateParams, menuFactory) {
 
         var dish= menuFactory.getDish(parseInt($stateParams.id,10));
-        $scope.dish = dish;
-
+        $scope.dish = dish;       
     }])
 
-    .controller('DishCommentController', ['$scope', 'menuFactory', function($scope, menuFactory) {
+    .controller('DishCommentController', ['$scope', function($scope) {
         $scope.defaultRadioChosen = 5;
         var score = [
             {value: "1", label: "1"},
@@ -99,26 +98,17 @@ angular.module('gratiaApp')
         ];
         $scope.comments = [];
         $scope.scores = score;
-        //Step 1: Create a JavaScript object to hold the comment from the form
         $scope.commentFormData = {rating: 5, author: '', comment: '', date: ''};
 
         $scope.submitComment = function () {
-            if($scope.commentFormData !== '') {
-            //Step 2: This is how you record the date
+              
             $scope.commentFormData.date = new Date().toISOString();
-            
-            // Step 3: Push your comment into the dish's comment array
             $scope.dish.comments.push($scope.commentFormData);
-        }
-                
-            //Step 4: reset your form to pristine
             $scope.commentForm.$setPristine();
-
-            //Step 5: reset your JavaScript object that holds your comment
             $scope.commentFormData = {name: '', rating: 5, author: ''};
         };
     }])
-
+ 
     .controller('IndexController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope,$stateParams,menuFactory,corporateFactory) {
         $scope.promotion = menuFactory.getPromotion(0);
         $scope.leader = corporateFactory.getLeader(3);

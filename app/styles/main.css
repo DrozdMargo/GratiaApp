@@ -21,21 +21,22 @@ body{
 	color: #d89b64;
 	transition: 0.4s;
 }
-.navbar-default .navbar-nav>li>a {
- 	background-color: #fff;
- }
- .navbar-brand>img {
+.navbar-brand>img {
  	display: inline;
 }
 .nav  li{
     z-index: 2;
+    cursor: pointer;
 }
-	.navbar-toggle {
+.navbar-toggle {
     margin-top: 20px;
 }
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
      background-color:#d89b64;
+}
+textarea {
+	resize: none;
 }
 header {
 	margin-bottom: 30px;
