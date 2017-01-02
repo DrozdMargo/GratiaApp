@@ -67,7 +67,7 @@
                             <label class="radio-inline radio-stars"><input type="radio" value="2" ng-model="comment.rating" name="rating">2</label>
                             <label class="radio-inline radio-stars"><input type="radio" value="3" ng-model="comment.rating" name="rating">3</label>
                             <label class="radio-inline radio-stars"><input type="radio" value="4" ng-model="comment.rating" name="rating">4</label>
-                            <label class="radio-inline radio-stars"><input type="radio" value="5" ng-model="comment.rating" name="rating" checked>5</label>
+                            <label class="radio-inline radio-stars"><input type="radio" ng-value="5" ng-model="comment.rating" name="rating" ng-checked="true">5</label>
                         </div>
                     </div>
                     <div class="form-group" ng-class="{ 'has-error' : commentForm.comment.$error.required && !commentForm.comment.$pristine }">

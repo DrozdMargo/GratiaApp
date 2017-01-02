@@ -55,7 +55,6 @@ angular.module('gratiaApp')
         $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:"" };
 
         var channels = [{value:"tel", label:"Tel."}, {value:"Email",label:"Email"}];
-
         $scope.channels = channels;
         $scope.invalidChannelSelection = false;
 
@@ -88,7 +87,7 @@ angular.module('gratiaApp')
     }])
 
     .controller('DishCommentController', ['$scope', function($scope) {
-        $scope.defaultRadioChosen = 5;
+
         var score = [
             {value: "1", label: "1"},
             {value: "2", label: "2"},
@@ -101,11 +100,11 @@ angular.module('gratiaApp')
         $scope.commentFormData = {rating: 5, author: '', comment: '', date: ''};
 
         $scope.submitComment = function () {
-              
+
             $scope.commentFormData.date = new Date().toISOString();
             $scope.dish.comments.push($scope.commentFormData);
             $scope.commentForm.$setPristine();
-            $scope.commentFormData = {name: '', rating: 5, author: ''};
+
         };
     }])
  

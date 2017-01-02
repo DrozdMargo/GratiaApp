@@ -97,7 +97,7 @@ header {
 .media .media-body,
 .row-content p,
 .table-responsive {
-	font-size: 15px;
+	font-size: 13px;
 }
 .row-footer {
 	margin-top: 80px;
@@ -112,9 +112,7 @@ header {
 .footer-text {
 	margin-top: -60px;
 }
-p.question {
-	margin-top: -5px;
-}
+
 .info-user p,
 .info-address {
 	font-family: 'Crimson Text', serif;
@@ -227,14 +225,14 @@ p.question {
 .media-promotion .media-body {
 	padding: 25px;
 }
-
+.navbar-brand>img {
+	width: 80px;
+}
 
 
 @media (min-width: 768px) {
-	
-	.navbar-brand>img {
-    	padding-left: 80px;
-     }
+
+
     .navbar-nav>li {
     	float: left;
 	}
@@ -242,7 +240,7 @@ p.question {
 		float: left;
 	}
 	.nav.navbar-nav {
-    margin-top: 15px;
+    margin-top: 30px;
     float: right;
 	}	
 	.container-fluid .jumbotron {
@@ -253,11 +251,32 @@ p.question {
 }
 
 @media (max-width: 768px) {
+	.dl-horizontal dt {
+		float: left;
+		width: 50%;
+		overflow: hidden;
+		clear: left;
+		text-align: right;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-right: 10px;
+	}
+	.dl-horizontal dd {
+		float: right;
+		width: 50%;
+
+	}
 	.navbar-default{
 		height: 80px;
 	}
 	 .navbar-nav ul {
 		width: 100%;
+	}
+	.navbar-brand>img {
+		width: 80px;
+	}
+	.navbar-brand>img {
+		margin-top:-15px;
 	}
 	.menu-title {
 		background-image: url(../images/gratia477.png);
@@ -294,7 +313,7 @@ p.question {
 	}
 	.media.media-promotion {
 		margin-top: 50px;
-}
+	}
 }
 
 @media (max-width: 548px) {
